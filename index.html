@@ -3,9 +3,139 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>ybtao的主页</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: rgb(231, 231, 231);
+      }
+      /* *{
+        border: 1px solid black;
+      } */
+      .Shadow {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+          rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+      }
+      .flex {
+        display: flex;
+      }
+      .White {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .daoHang {
+        padding: 10px 10px;
+        border-bottom: 1px solid rgb(43, 154, 209);
+        font-size: 14px;
+        color: rgb(0, 26, 255);
+      }
+      /* 当屏幕宽度小于600px时改变 */
+      @media (max-width: 600px) {
+        .ceBian {
+          display: none;
+        }
+        .neiRong {
+          flex-direction: column;
+        }
+        .shuJu {
+          flex-direction: column;
+        }
+        .youQu {
+          margin-left: 8px;
+        }
+        .shuJuKuai {
+          margin: 0 0 8px;
+          flex: auto;
+        }
+      }
+    </style>
   </head>
-  <body>
-    <p>my first website</p>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 200px; z-index: 2" class="White Shadow ceBian">
+      <!-- 头像栏 -->
+      <div
+        style="
+          padding: 10px;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 1px solid rgb(232, 207, 207);
+        "
+        class="flex"
+      >
+        <img
+          src="https://pic.dmoe.in/imgdata/2023/08/23/6b586ad10f935ef57999cb5e193e05a7.jpg"
+          width="100px"
+          height="100px"
+          alt=""
+        />
+        <div style="margin-left: 20px">ybtao</div>
+      </div>
+      <!-- 导航栏 -->
+      <div class="flex1">
+        <div class="daoHang">导航</div>
+        <div class="daoHang">导航</div>
+        <div class="daoHang">导航</div>
+        <div class="daoHang">导航</div>
+        <div class="daoHang">导航</div>
+      </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex1 flex column">
+      <!-- 头部栏 -->
+      <div style="height: 100px; z-index: 1" class="White Shadow"></div>
+      <!-- 内容区 -->
+      <div style="overflow: auto" class="flex1 flex neiRong">
+        <!-- 左区 -->
+        <div style="flex: 3" class="flex column mg8">
+          <!-- 数据区 -->
+          <div class="flex shuJu">
+            <!-- 数据块 -->
+            <div
+              style="height: 100px"
+              class="flex1 White mg8 Shadow shuJuKuai"
+            ></div>
+            <div
+              style="height: 100px"
+              class="flex1 White mg8 Shadow shuJuKuai"
+            ></div>
+            <div
+              style="height: 100px"
+              class="flex1 White mg8 Shadow shuJuKuai"
+            ></div>
+            <div
+              style="height: 100px"
+              class="flex1 White mg8 Shadow shuJuKuai"
+            ></div>
+          </div>
+          <!-- 列表区 -->
+          <div class="flex column">
+            <!-- 列表项 -->
+            <div style="height: 200px" class="White mg8 Shadow"></div>
+            <div style="height: 200px" class="White mg8 Shadow"></div>
+            <div style="height: 200px" class="White mg8 Shadow"></div>
+            <div style="height: 200px" class="White mg8 Shadow"></div>
+            <div style="height: 200px" class="White mg8 Shadow"></div>
+            <div style="height: 200px" class="White mg8 Shadow"></div>
+          </div>
+        </div>
+        <!-- 右区 -->
+        <div style="flex: 1" class="flex column mg8 youQu">
+          <!-- 提示区 -->
+          <div style="height: 150px" class="White Shadow"></div>
+          <!-- 消息区 -->
+          <div style="height: 300px" class="White mg8 Shadow"></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
